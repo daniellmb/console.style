@@ -14,7 +14,7 @@
 
 ## The Problem
 
-Styling text in a browser console it really cool but has a very unfriendly API, especially if you want to do more than just set a single color.
+Styling text in a browser console is fun, but, unfortunately, has a pretty unfriendly API especially if you want to do more than just set a single CSS rule.
 
 For example lets say you want to style some text green, using the default API it looks something like this:
 
