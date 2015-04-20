@@ -27,6 +27,5 @@ notifications:
     on_success: always
     on_failure: always
     on_start: false
-
 env:
   - CODECLIMATE_REPO_TOKEN=724c1c6795a8279dc941ea0a1ada1439f97df5de2c001ae859ec2a3f5ceb6d47
