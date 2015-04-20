@@ -136,11 +136,9 @@ Pro Tip: Use a custom email address and url shortener to measure (and a/b test?)
 
 ## Browser Support
 
- - ☑ Chrome
- - ☑ Safari
- - ☑ Opera
- - ☑ FireFox (&lt;img&gt; doesn't work yet)
- - ☐ Internet Explorer (lol yeah right)
+![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Internet Explorer](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Firefox (FireBug)](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) 
+--- | --- | --- | --- | --- |
+☑ Yep | ☑ Yep | ☑ Yep | ☐ lol yeah right | ☑ (&lt;img&gt; doesn't work yet) |
 
 ## Install Choices
 
