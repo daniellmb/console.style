@@ -10,7 +10,7 @@
 
 ## About
 
-`console.style` is 0.6kb standalone micro-library that facilitates intuitive styling of the browser console with CSS.
+`console.style` is 0.6kb standalone micro-library that facilitates intuitive styling of the browser developer tools console with markup and CSS.
 
 ## The Problem
 
@@ -70,9 +70,9 @@ console.style('<css="font-size:100px;color:#fff;text-shadow:0 1px 0 #ccc,0 2px 0
 ```
 ![example console.style result](http://daniellmb.github.io/console.style/demo/complex-css-rules.png)
 
-### Use console.style.wrap to wrap text in a <css> tag with the provided style rules
+### Use console.style.wrap to wrap text in a &lt;css&gt; tag
 
-If you don't like the look of the `<css>` tags you can always use the `console.style.wrap` method like this:
+Don't like the look of the `<css>` tags in your JavaScript? No problem, you can always use the `console.style.wrap` method like this:
 
 ```JavaScript
 var wrap = console.style.wrap;
