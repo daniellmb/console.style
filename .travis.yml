@@ -4,11 +4,10 @@ node_js:
   - '0.10'
 
 before_script:
-  #- npm install -g codeclimate-test-reporter
+  - npm install -g codeclimate-test-reporter
 
 after_script:
-  #TODO: enable publishing code coverage reports
-  #- codeclimate < test/coverage/**/lcov.info
+  - codeclimate < test/coverage/**/lcov.info
 
 notifications:
   # publish build status to IRC channel: #console.style
@@ -21,14 +20,13 @@ notifications:
     - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}'
     - 'Change view : %{compare_url}'
     - 'Build details : %{build_url}'
-  #TODO: enable publishing build status to gitter.im
   # publish build status to gitter chat room: https://gitter.im/daniellmb/console.style
-  #webhooks:
-  #  urls:
-  #  - [REPLACE WITH YOUR WEBHOOK URL; https://webhooks.gitter.im/e/XXXXXXXXXXXXXXXX]
-  #  on_success: always
-  #  on_failure: always
-  #  on_start: false
+  webhooks:
+    urls:
+    - https://webhooks.gitter.im/e/eec82b471d408d2ae5d6
+    on_success: always
+    on_failure: always
+    on_start: false
 
 env:
-  #- CODECLIMATE_REPO_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  - CODECLIMATE_REPO_TOKEN=724c1c6795a8279dc941ea0a1ada1439f97df5de2c001ae859ec2a3f5ceb6d47

@@ -6,6 +6,7 @@
 [![Bower Version][bower-image]][bower-url]
 [![NPM version][npm-image]][npm-url]
 [![IRC Channel][irc-image]][irc-url]
+[![Gitter][gitter-image]][gitter-url]
 
 ## About
 
