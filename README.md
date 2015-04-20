@@ -1,4 +1,6 @@
 # console.style
+
+[![Join the chat at https://gitter.im/daniellmb/console.style](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/daniellmb/console.style?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status][build-image]][build-url]
 [![Code GPA][gpa-image]][gpa-url]
 [![Test Coverage][coverage-image]][coverage-url]
