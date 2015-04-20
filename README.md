@@ -10,7 +10,7 @@
 
 ## About
 
-`console.style` is 0.6kb standalone micro-library that facilitates intuitive styling of the browser developer tools console with markup and CSS.
+`console.style` is 0.6kb standalone micro-library that facilitates intuitive styling of the browser developer tools console using markup or CSS.
 
 ## The Problem
 
