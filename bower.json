@@ -1,0 +1,23 @@
+{
+  "name": "console.style",
+  "version": "0.1.0",
+  "main": "console.style.js",
+  "ignore": [
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".jshintrc",
+    ".npmignore",
+    ".travis.yml",
+    ".umd",
+    "gulpfile.js",
+    "npm-shrinkwrap.json",
+    "package.json"
+  ],
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}
