@@ -134,9 +134,18 @@ console.log('Interested? Send an email to resume@loopnet.com, and check out our 
 
 Pro Tip: Use a custom email address and url shortener to measure (and a/b test?) engagement and effectiveness.
 
+## Browser Support
+
+ - ☑ Chrome
+ - ☑ Safari
+ - ☑ Opera
+ - ☑ FireFox (<img> doesn't work yet)
+ - ☐ Internet Explorer (lol yeah right)
+
 ## Install Choices
-- `bower install console.style`
-- [download the zip](https://github.com/daniellmb/console.style/archive/master.zip)
+
+  - `bower install console.style`
+  - [download the zip](https://github.com/daniellmb/console.style/archive/master.zip)
 
 ## Tasks
 
