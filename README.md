@@ -22,19 +22,19 @@ For example, lets say you want to style some text green, typically it would look
 console.log('%cThis text will be green', 'color:green');
 ```
 
-That wasn't too bad, but what if you wanted to have just a section of text green? You'd have to do something like this to reset the color back to black.
+That wasn't too bad, but what if you want just a section of text green? Then you'd have to do something like the following to reset the color back to black.
 
 ```JavaScript
 console.log('%cThis text%c will all be green', 'color:green', 'color:black');
 ```
 
-Of course you may need to take it a step further by setting and resetting multiple CSS rules.
+Of course, in a real use you probably need to take it a step further by setting and resetting multiple CSS rules.
 
 ```JavaScript
 console.log('Some %ctext%c will all be %cgreen%c, but not this', 'font-weight:bold;', 'font-weight:normal;', 'color:green;', 'color:black');
 ```
 
-As you can see it quickly gets out of hand when you have to manually reset each style, and remember what `%c` token goes with what method parameter so the styles won't bleed over into the next section.
+As you can see it quickly gets out of hand. You must explicitly reset each style, and remember what `%c` token goes with what method parameter so the styles will not bleed over into the next section.
 
 ## There is a better way!
 
@@ -72,7 +72,7 @@ console.style('<css="font-size:100px;color:#fff;text-shadow:0 1px 0 #ccc,0 2px 0
 
 ### Use console.style.wrap to wrap text in a <css> tag with the provided style rules
 
-If you don't like the look of the `<css>` tag you can always use the `wrap` method like this:
+If you don't like the look of the `<css>` tags you can always use the `console.style.wrap` method like this:
 
 ```JavaScript
 var wrap = console.style.wrap;
