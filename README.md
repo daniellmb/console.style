@@ -14,9 +14,9 @@
 
 ## The Problem
 
-Styling text in a browser console is fun, but, unfortunately, has a pretty unfriendly API especially if you want to do more than just set a single CSS rule.
+Styling text in a browser console is fun, but, unfortunately, has a pretty unfriendly token system, especially if you want to do more than just set a single CSS rule.
 
-For example lets say you want to style some text green, using the default API it looks something like this:
+For example, lets say you want to style some text green, typically it would look something like this:
 
 ```JavaScript
 console.log('%cThis text will be green', 'color:green');
