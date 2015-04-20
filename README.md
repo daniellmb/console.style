@@ -139,7 +139,7 @@ Pro Tip: Use a custom email address and url shortener to measure (and a/b test?)
  - ☑ Chrome
  - ☑ Safari
  - ☑ Opera
- - ☑ FireFox (<img> doesn't work yet)
+ - ☑ FireFox (&lt;img&gt; doesn't work yet)
  - ☐ Internet Explorer (lol yeah right)
 
 ## Install Choices
