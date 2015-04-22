@@ -31,7 +31,7 @@ console.log('Only %cthis text%c will be green', 'color:green', 'color:black');
 Of course, in a real-world use you'd probably need to take it a step further by setting and resetting multiple CSS rules.
 
 ```JavaScript
-console.log('Some %ctext%c will be bold and %c some green%c, but not this', 'font-weight:bold;', 'font-weight:normal;', 'color:green;', 'color:black');
+console.log('Some %ctext%c will be bold and %csome green%c, but not this', 'font-weight:bold;', 'font-weight:normal;', 'color:green;', 'color:black');
 ```
 
 As you can see it quickly gets out of hand. You must explicitly reset each style, and remember what `%c` token goes with which console log method parameter so the styles will not bleed over into the next section.
