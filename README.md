@@ -108,8 +108,6 @@ console.style(c.blue('console.style') + ' is so ' + c.bgYellow('great') + '!');
 ```
 ![example console.style result](http://daniellmb.github.io/console.style/demo/color-methods.png)
 
-Nested tags will be supported as soon as you submit a pull request with the feature ;-) since it is not something I need.
-
 ### Easily add your own style defaults
 
 It's simple to extend console.colors with your own presets using `console.style.wrap`.
@@ -145,6 +143,10 @@ Pro Tip: Use a custom email address and url shortener to measure (and a/b test?)
 
   - `bower install console.style`
   - [download the zip](https://github.com/daniellmb/console.style/archive/master.zip)
+
+## Future Work
+
+Nested tags will be supported as soon as you submit a pull request with the feature ;-) since it is not something I need.
 
 ## Tasks
 
