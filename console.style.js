@@ -6,12 +6,13 @@
 
   /* istanbul ignore if */
   if (!console || !console.log) {
-  	return;
+    return;
   }
 
   var colors = 'Black Blue Cyan Gray Green Magenta Red White Yellow'.split(' ');
   var rxTags = /<(css|b|i)(?:=['"](.*?)['"])?>(.*?)<\/(?:css|b|i)>/ig;
   var rxRules = /([a-z\-]+)\s?:\s?([^;'"]+);?/ig;
+  var rxTokens = /%[sdifoO]/g;
   var rxImgs = /<img=['"](.*?)['"]>/ig;
   var bg = 'background';
   var px = 'px';
@@ -57,6 +58,7 @@
         var styles = [];
         var resets = [];
         $2T = $2T || '';
+        $3T = $3T.replace(rxTokens, '');
         switch ($1T) {
           case 'b':
             $2T += ';font-weight:bold';

@@ -185,6 +185,18 @@ describe('console.style.js', function () {
         'color:red', 'color:inherit');
     });
 
+    it('should ignore all format specifiers except %c', function () {
+      // arrange
+      var text = '<css="color:green">green %s %d %i %f %o %O text</css>';
+      // act
+      console.style(text);
+      // assert
+      expect(console.log).toHaveBeenCalledWith(
+        '%cgreen       text%c',
+        'color:green', 'color:inherit'
+      );
+    });
+
     it('should support the <b> tag with styles', function () {
       // arrange
       var text = 'test <b="color:green">bold</b> tag';
