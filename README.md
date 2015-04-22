@@ -81,7 +81,7 @@ console.style('Everyone ' + wrap('♥', 'color:#c00;font-weight:bold;') + ' cons
 ```
 ![example console.style result](http://daniellmb.github.io/console.style/demo/wrap-method.png)
 
-### Use console.colors methods to quickly color text
+### Use a console.colors method to quickly color text
 
  - black 
  - blue 
