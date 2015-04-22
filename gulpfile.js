@@ -35,7 +35,7 @@ gulp.task('gpa', function () {
   return gulp.src([source, specs])
     .pipe(complexity({
       cyclomatic: [8],
-      halstead: [12],
+      halstead: [13],
       maintainability: [100]
     }));
 });
