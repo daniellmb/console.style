@@ -4,7 +4,7 @@
  */
 (function(console) {
 
-  /* istanbul ignore else */
+  /* istanbul ignore if */
   if (!console || !console.log) {
   	return;
   }
@@ -95,8 +95,9 @@
    * @param text - the text to style
    * @example console.style('Wow, this is <css="color:green;font-weight:bold;">so much</css> better!');
    */
-  console.style = style = function(text) {
-    console.log.apply(console, parse(text));
+  console.style = style = function() {
+    var args = [].slice.call(arguments);
+    console.log.apply(console, parse(args.shift()).concat(args));
   };
 
   /**
@@ -104,7 +105,7 @@
    * @param text - the text to wrap
    * @param rule - CSS rules to apply
    * @returns {string} the wrapped text
-   * @example console.style('I just ' + console.style.wrap('♥', 'color:#c00;font-weight:bold;') + ' console.style');
+   * @example console.style('I just ' + console.style.wrap('love', 'color:#c00;font-weight:bold;') + ' console.style');
    */
   console.style.wrap = wrap = function(text, rules) {
     return '<css="' + rules + '">' + text + '</css>';

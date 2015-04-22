@@ -246,6 +246,20 @@ describe('console.style.js', function () {
       );
     });
 
+    it('should support multiple arguments', function () {
+      // arrange
+      var text1 = '<b>bold text</b>';
+      var text2 = 'normal text';
+      // act
+      console.style(text1, text2);
+      // assert
+      expect(console.log).toHaveBeenCalledWith(
+        '%cbold text%c',
+        'font-weight:bold', 'font-weight:inherit',
+        text2
+      );
+    });
+
     // need this? submit a pull request :)
     xit('should support nested css tags', function () {
       // arrange
@@ -268,6 +282,16 @@ describe('console.style.js', function () {
       // act
       // assert
       expect(typeof console.style.wrap).toBe('function');
+    });
+
+    it('should wrap the text with a <css> tag', function () {
+      // arrange
+      var text = 'this is a test';
+      var css = 'color:blue;font-weight:bold';
+      // act
+      var result = console.style.wrap(text, css);
+      // assert
+      expect(result).toBe('<css="color:blue;font-weight:bold">this is a test</css>');
     });
 
   });
