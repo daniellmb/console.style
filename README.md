@@ -144,7 +144,7 @@ Pro Tip: Use a custom email address and url shortener to measure (and a/b test?)
   - `bower install console.style`
   - [download the zip](https://github.com/daniellmb/console.style/archive/master.zip)
 
-## Future Work
+## Contributing
 
 Nested tags will be supported as soon as you submit a pull request with the feature ;-) since it is not something I need.
 
