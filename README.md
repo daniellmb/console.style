@@ -124,7 +124,7 @@ console.style(console.colors.rainbow('Epic!'));
 
 ## Why?
 
-What, you mean beside the fact that it's **awesome**?! Sky is the limit... want to use the browser console on every page of your website to recruit front-end talent? Boom, done!
+What, you mean beside the fact that it's **awesome**?! The sky is the limit... want to use the browser console on every page of your website to recruit front-end talent? Boom, done!
 
 ```JavaScript
 console.style('<img="background:url(http://goo.gl/NnHhVZ);width:127px;height:38px">');
