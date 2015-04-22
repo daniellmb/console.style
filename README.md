@@ -10,7 +10,7 @@
 
 ## About
 
-`console.style` is 0.6kb standalone micro-library that facilitates intuitive styling of the browser developer tools console using markup or CSS.
+`console.style` is 0.6kb standalone micro-library that facilitates intuitive styling of the browser developer tools console using HTML markup and CSS.
 
 ## The Problem
 
@@ -19,22 +19,22 @@ Styling text in a browser console is fun, but, unfortunately, has a pretty unfri
 For example, lets say you want to style some text green, typically it would look something like this:
 
 ```JavaScript
-console.log('%cThis text will be green', 'color:green');
+console.log('%cThis text will all be green', 'color:green');
 ```
 
 That wasn't too bad, but what if you want just a section of text green? Then you'd have to do something like the following to reset the color back to black.
 
 ```JavaScript
-console.log('%cThis text%c will all be green', 'color:green', 'color:black');
+console.log('Only %cthis text%c will be green', 'color:green', 'color:black');
 ```
 
-Of course, in a real use you probably need to take it a step further by setting and resetting multiple CSS rules.
+Of course, in a real-world use you'd probably need to take it a step further by setting and resetting multiple CSS rules.
 
 ```JavaScript
-console.log('Some %ctext%c will all be %cgreen%c, but not this', 'font-weight:bold;', 'font-weight:normal;', 'color:green;', 'color:black');
+console.log('Some %ctext%c will be bold and %c some green%c, but not this', 'font-weight:bold;', 'font-weight:normal;', 'color:green;', 'color:black');
 ```
 
-As you can see it quickly gets out of hand. You must explicitly reset each style, and remember what `%c` token goes with what method parameter so the styles will not bleed over into the next section.
+As you can see it quickly gets out of hand. You must explicitly reset each style, and remember what `%c` token goes with which console log method parameter so the styles will not bleed over into the next section.
 
 ## There is a better way!
 
@@ -66,7 +66,8 @@ console.style('You <css="color:#c00;font-weight:bold;text-decoration:underline;"
 Yes, you can do amazing things like this:
 
 ```JavaScript
-console.style('<css="font-size:100px;color:#fff;text-shadow:0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);">I ♥ console.style</css>');
+var css = 'font-size:100px;color:#fff;text-shadow:0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);';
+console.style('<css="' + css + '">I ♥ console.style</css>');
 ```
 ![example console.style result](http://daniellmb.github.io/console.style/demo/complex-css-rules.png)
 
