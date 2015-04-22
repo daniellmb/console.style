@@ -5,8 +5,9 @@
 (function(console) {
 
   /* istanbul ignore else */
-  if (!console || !console.log)
+  if (!console || !console.log) {
   	return;
+  }
 
   var colors = 'Black Blue Cyan Gray Green Magenta Red White Yellow'.split(' ');
   var rxTags = /<(css|b|i)(?:=['"](.*?)['"])?>(.*?)<\/(?:css|b|i)>/ig;
