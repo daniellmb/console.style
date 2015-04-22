@@ -42,7 +42,7 @@ With `console.style` each individual CSS rule is first applied, then automatical
 
 ###[Check out some live examples](http://daniellmb.github.io/console.style/demo/index.html)
 
-### Use &lt;b&gt; and &lt;i&gt; to quickly format text
+### Use &lt;b&gt; and &lt;i&gt; to quickly style text
 
 ```JavaScript
 console.style('I <i>really</i> <b="color:red;">♥</b> console.style!');
