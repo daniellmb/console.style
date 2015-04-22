@@ -91,8 +91,9 @@
      * @param text - the text to style
      * @example console.style('Wow, this is <css="color:green;font-weight:bold;">so much</css> better!');
      */
-    console.style = style = function(text) {
-      console.log.apply(console, parse(text));
+    console.style = style = function() {
+      var args = Array.prototype.slice.call(arguments);
+      console.log.apply(console, parse(args.shift()).concat(args));
     };
 
     /**
