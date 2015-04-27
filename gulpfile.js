@@ -17,6 +17,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     replace = require('gulp-replace'),
     karma = require('gulp-karma'),
+    jsdoc = require('gulp-jsdoc'),
     fs = require('fs'),
     source = 'console.style.js',
     sourceMin = 'console.style.min.js',
@@ -57,7 +58,6 @@ gulp.task('min', function () {
     .pipe(gulp.dest('.'));
 });
 
-
 gulp.task('test-min', ['min'], function () {
   return gulp.src([sourceMin, specs])
     .pipe(karma({
@@ -66,4 +66,9 @@ gulp.task('test-min', ['min'], function () {
     }));
 });
 
-gulp.task('default', ['lint', 'gpa', 'test', 'test-min']);
+gulp.task('docs', function () {
+  return gulp.src(source)
+    .pipe(jsdoc('./docs'));
+});
+
+gulp.task('default', ['lint', 'gpa', 'test', 'test-min', 'docs']);
