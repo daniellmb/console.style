@@ -48,7 +48,7 @@
   "devDependencies": {
     "gulp": "*",
     "gulp-complexity": "*",
-    "gulp-jsdoc": "^0.1.4",
+    "gulp-jsdoc": "*",
     "gulp-jshint": "*",
     "gulp-karma": "*",
     "gulp-rename": "*",

@@ -31,7 +31,7 @@
    * @function parse
    * @memberOf consoleStyle
    * @param {string} text - the text with styles to parse
-   * @returns {array} args - an array of console.log arguments
+   * @returns {Array} args - an array of console.log arguments
    */
   var parse = function(text) {
     var args = [text];
