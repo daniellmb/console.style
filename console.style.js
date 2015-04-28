@@ -3,6 +3,13 @@
  * @author Daniel Lamb <dlamb.open.source@gmail.com>
  */
 (function(console) {
+  /**
+   * @namespace console
+   */
+
+  /**
+   * @namespace consoleStyle
+   */
 
   /* istanbul ignore if */
   if (!console || !console.log) {
@@ -20,9 +27,11 @@
   var wrap;
 
   /**
-   * Regex mojo to parse the text to log in the console
-   * @param text - the text with styles to parse
-   * @returns an array of console.log arguments
+   * Regex mojo to parse the text to log in the console.
+   * @function parse
+   * @memberOf consoleStyle
+   * @param {string} text - the text with styles to parse
+   * @returns {Array} args - an array of console.log arguments
    */
   var parse = function(text) {
     var args = [text];
@@ -79,7 +88,10 @@
   };
 
   /**
-   * Define color shortcut methods on the console
+   * Define color shortcut methods on the console.
+   * @function colors
+   * @memberOf console
+   * @param {string} color - the CSS color rule to apply
    * @example console.style('Wow, this is ' + console.colors.green('so much') + ' better!');
    */
   console.colors = {};
@@ -94,6 +106,8 @@
 
   /**
    * Intuitively Style Browser Console Text with CSS.
+   * @function style
+   * @memberOf console
    * @param text - the text to style
    * @example console.style('Wow, this is <css="color:green;font-weight:bold;">so much</css> better!');
    */
@@ -103,10 +117,12 @@
   };
 
   /**
-   * Wraps the given text in a <css> tag with the provided style rules
-   * @param text - the text to wrap
-   * @param rule - CSS rules to apply
-   * @returns {string} the wrapped text
+   * Wraps the given text in a <css> tag with the provided style rules.
+   * @function wrap
+   * @memberOf console
+   * @param {string} text - the text to wrap
+   * @param {string} rule - CSS rules to apply
+   * @returns {string} - the wrapped text
    * @example console.style('I just ' + console.style.wrap('love', 'color:#c00;font-weight:bold;') + ' console.style');
    */
   console.style.wrap = wrap = function(text, rules) {
