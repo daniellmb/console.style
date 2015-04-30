@@ -1,0 +1,1 @@
+(function(b,a){'function'===typeof define&&define.amd?define([],a):a()})(this,function(){$1});

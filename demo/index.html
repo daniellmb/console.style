@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>console.style()</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<p>Open the browser console to see what console.style can do for you!</p>
+<script src="../console.style.js"></script>
+<script>
+  console.style('<css="font-size:70px;color:#fff;text-shadow:0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);">console.style</css>');
+  console.style('I <i>really</i> <b="color:red;">♥</b> console.style!');
+  console.style('You <css="color:#c00;font-weight:bold;text-decoration:underline;">really ♥</css> console.style!');
+  console.style('Everyone ' + console.style.wrap('♥', 'color:#c00;font-weight:bold;') + ' console.style');
+  console.style(console.colors.blue('console.style') + ' is so ' + console.colors.bgYellow('great') + '!');
+  console.style('Have an awesome <img="background:url(http://goo.gl/EGlS7v);width:40px;height:40px"> day!');
+</script>
+</body>
+</html>

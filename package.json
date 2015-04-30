@@ -1,0 +1,64 @@
+{
+  "name": "console.style",
+  "version": "0.2.1",
+  "description": "console.style is a standalone micro-library that facilitates intuitive styling of the browser console with CSS.",
+  "author": {
+    "name": "Daniel Lamb",
+    "email": "dlamb.open.source@gmail.com",
+    "url": "https://github.com/daniellmb"
+  },
+  "homepage": "https://github.com/daniellmb/console.style",
+  "bugs": {
+    "url": "https://github.com/daniellmb/console.style/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://daniellmb.mit-license.org"
+    }
+  ],
+  "maintainers": [],
+  "contributors": [
+    {
+      "name": "Daniel Lamb",
+      "email": "dlamb.open.source@gmail.com",
+      "url": "https://github.com/daniellmb"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/daniellmb/console.style.git"
+  },
+  "main": "console.style.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "keywords": [
+    "micro",
+    "library",
+    "style",
+    "browser",
+    "console",
+    "log",
+    "text",
+    "image",
+    "css"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-complexity": "*",
+    "gulp-jsdoc": "*",
+    "gulp-jshint": "*",
+    "gulp-karma": "*",
+    "gulp-rename": "*",
+    "gulp-replace": "*",
+    "gulp-uglify": "*",
+    "karma-coverage": "*",
+    "karma-jasmine": "*",
+    "karma-phantomjs-launcher": "*"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
