@@ -64,8 +64,6 @@
         return wrap('', styles.join(';'));
       });
       args[0] = text.replace(rxTags, function(matchT, $1T, $2T, $3T) {
-        var styles = [];
-        var resets = [];
         $2T = $2T || '';
         $3T = $3T.replace(rxTokens, '');
         switch ($1T) {
@@ -76,11 +74,7 @@
             $2T += ';font-style:italic';
             break;
         }
-        $2T.replace(rxRules, function(matchR, $1R, $2R) {
-          styles.push($1R + ':' + $2R);
-          resets.push($1R + ':inherit');
-        });
-        args.push(styles.join(';'), resets.join(';'));
+        args.push($2T, '');
         return '%c' + $3T + '%c';
       });
     }

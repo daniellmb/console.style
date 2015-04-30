@@ -38,7 +38,7 @@ As you can see it quickly gets out of hand. You must explicitly reset each style
 
 ## There is a better way!
 
-With `console.style` each individual CSS rule is first applied, then automatically reset for you.
+With `console.style` first the CSS rules are applied, then all are automatically reset for you.
 
 ###[Check out some live examples](http://daniellmb.github.io/console.style/demo/index.html)
 

@@ -136,16 +136,16 @@ describe('console.style.js', function () {
       // act
       console.style(text);
       // assert
-      expect(console.log).toHaveBeenCalledWith('this %cis a%c test', 'color:red', 'color:inherit');
+      expect(console.log).toHaveBeenCalledWith('this %cis a%c test', 'color:red;', '');
     });
 
     it('should replace the css tags with single quote rules', function () {
       // arrange
-      var text = 'this <css=\'color:blue;\'>is a</css> test';
+      var text = 'this <css=\'color:blue\'>is a</css> test';
       // act
       console.style(text);
       // assert
-      expect(console.log).toHaveBeenCalledWith('this %cis a%c test', 'color:blue', 'color:inherit');
+      expect(console.log).toHaveBeenCalledWith('this %cis a%c test', 'color:blue', '');
     });
 
     it('should replace multiple css tags', function () {
@@ -156,33 +156,33 @@ describe('console.style.js', function () {
       // assert
       expect(console.log).toHaveBeenCalledWith(
         '%cred%c %cgreen%c refactor',
-        'color:red', 'color:inherit',
-        'color:green', 'color:inherit'
+        'color:red;', '',
+        'color:green;', ''
       );
     });
 
     it('should replace multiple rules in a single tag', function () {
       // arrange
-      var text = '<css="color:red;font-weight:bold;">bold red text</css>';
+      var text = '<css="color:red;font-weight:bold">bold red text</css>';
       // act
       console.style(text);
       // assert
       expect(console.log).toHaveBeenCalledWith(
         '%cbold red text%c',
-        'color:red;font-weight:bold', 'color:inherit;font-weight:inherit'
+        'color:red;font-weight:bold', ''
       );
     });
 
     it('should handle inconsistent css tag format', function () {
       // arrange
-      var data = 'Testing <css="color: green;font-weight:bold">bold green text!</css> 1 2 3 <css="color:red;">now red text!</css> The end!';
+      var data = 'Testing <css="color: green;font-weight:bold ">bold green text!</css> 1 2 3 <css="color:red;">now red text!</css> The end!';
       // act
       console.style(data);
       // assert
       expect(console.log).toHaveBeenCalledWith(
         'Testing %cbold green text!%c 1 2 3 %cnow red text!%c The end!',
-        'color:green;font-weight:bold', 'color:inherit;font-weight:inherit',
-        'color:red', 'color:inherit');
+        'color: green;font-weight:bold ', '',
+        'color:red;', '');
     });
 
     it('should ignore all format specifiers except %c', function () {
@@ -193,7 +193,7 @@ describe('console.style.js', function () {
       // assert
       expect(console.log).toHaveBeenCalledWith(
         '%cgreen       text%c',
-        'color:green', 'color:inherit'
+        'color:green', ''
       );
     });
 
@@ -206,7 +206,7 @@ describe('console.style.js', function () {
       expect(console.log).toHaveBeenCalledWith(
         'test %cbold%c tag',
         'color:green;font-weight:bold',
-        'color:inherit;font-weight:inherit');
+        '');
     });
 
     it('should support the <b> tag without styles', function () {
@@ -217,8 +217,8 @@ describe('console.style.js', function () {
       // assert
       expect(console.log).toHaveBeenCalledWith(
         'test %cbold%c tag',
-        'font-weight:bold',
-        'font-weight:inherit');
+        ';font-weight:bold',
+        '');
     });
 
     it('should support the <i> tag with styles', function () {
@@ -230,7 +230,7 @@ describe('console.style.js', function () {
       expect(console.log).toHaveBeenCalledWith(
         'test %citalic%c tag',
         'color:pink;font-style:italic',
-        'color:inherit;font-style:inherit');
+        '');
     });
 
     it('should support the <i> tag without styles', function () {
@@ -241,8 +241,8 @@ describe('console.style.js', function () {
       // assert
       expect(console.log).toHaveBeenCalledWith(
         'test %citalic%c tag',
-        'font-style:italic',
-        'font-style:inherit');
+        ';font-style:italic',
+        '');
     });
 
     it('should support the <img> tag', function () {
@@ -254,7 +254,7 @@ describe('console.style.js', function () {
       expect(console.log).toHaveBeenCalledWith(
         'test %c%c tag',
         'font-size:1px;background:url(http:/example.com/img.gif);background-repeat:no-repeat;line-height:50px;background-size:175px 50px;padding:25px 88px',
-        'font-size:inherit;background:inherit;background-repeat:inherit;line-height:inherit;background-size:inherit;padding:inherit'
+        ''
       );
     });
 
@@ -267,7 +267,7 @@ describe('console.style.js', function () {
       // assert
       expect(console.log).toHaveBeenCalledWith(
         '%cbold text%c',
-        'font-weight:bold', 'font-weight:inherit',
+        ';font-weight:bold', '',
         text2
       );
     });
@@ -282,7 +282,7 @@ describe('console.style.js', function () {
       expect(console.log).toHaveBeenCalledWith(
         'level0 %clevel1 %clevel2%c%c level0',
         'color:green', 'font-weight:bold',
-        'font-weight:inherit', 'color:inherit');
+        '', '');
     });
 
   });
