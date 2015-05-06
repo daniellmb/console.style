@@ -275,14 +275,15 @@ describe('console.style.js', function () {
     // need this? submit a pull request :)
     xit('should support nested css tags', function () {
       // arrange
-      var text = 'level0 <css="color:green;">level1 <css="font-weight:bold;">level2</css></css> level0';
+      var text = 'So, <css="color:green;">this text will be green, and <css="font-weight:bold;">this text will be bold and green</css></css>, but not this text';
       // act
       console.style(text);
       // assert
       expect(console.log).toHaveBeenCalledWith(
-        'level0 %clevel1 %clevel2%c%c level0',
-        'color:green', 'font-weight:bold',
-        '', '');
+        'So, %cthis text will be green, and %cthis text will be bold and green%c, but not this text',
+        'color:green;',
+        'font-weight:bold;color:green;', // <-- needs to inherit all css from the containing tag(s)
+        '');
     });
 
   });
