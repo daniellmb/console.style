@@ -139,7 +139,7 @@ Pro Tip: Use a custom email address and url shortener to measure (and a/b test?)
 --- | --- | --- | --- | --- |
 ☑ Yep¹ | ☑ Yep | ☑ Yep | ☑ Yep¹ | ☐ lol yeah right
 
-¹ &lt;img&gt; tags [don't work](https://src.chromium.org/viewvc/blink/trunk/Source/devtools/front_end/console/ConsoleViewMessage.js?pathrev=197345#l797) ☹
+¹ images [don't work](https://src.chromium.org/viewvc/blink/trunk/Source/devtools/front_end/console/ConsoleViewMessage.js?pathrev=197345#l797) ☹
 
 ## Install Choices
 
