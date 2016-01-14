@@ -137,7 +137,9 @@ Pro Tip: Use a custom email address and url shortener to measure (and a/b test?)
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Firefox (FireBug)](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![Internet Explorer](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) 
 --- | --- | --- | --- | --- |
-☑ Yep | ☑ Yep | ☑ Yep | ☑ (&lt;img&gt; doesn't work yet) | ☐ lol yeah right
+☑ Yep¹ | ☑ Yep | ☑ Yep | ☑ Yep¹ | ☐ lol yeah right
+
+¹ &lt;img&gt; tags [don't work](https://src.chromium.org/viewvc/blink/trunk/Source/devtools/front_end/console/ConsoleViewMessage.js?pathrev=197345#l797) ☹
 
 ## Install Choices
 
