@@ -56,6 +56,8 @@ console.style('Have an awesome <img="background:url(http://goo.gl/EGlS7v);width:
 ```
 ![example console.style result](http://daniellmb.github.io/console.style/demo/img-tag.gif)
 
+Note: This feature is not supported by all [browsers](#browser-support).
+
 ### Use &lt;css&gt; to set multiple CSS rules
 
 ```JavaScript
