@@ -1,7 +1,7 @@
 {
   "name": "console.style",
   "version": "0.2.0",
-  "dependencies": {
+  "devDependencies": {
     "gulp": {
       "version": "3.8.11",
       "from": "gulp@*",
