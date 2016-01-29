@@ -1,6 +1,6 @@
 {
   "name": "console.style",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "devDependencies": {
     "gulp": {
       "version": "3.8.11",
